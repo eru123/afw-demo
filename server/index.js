@@ -5,7 +5,7 @@ async function start(){
     const app = Fastify({ logger: true });
     // const prisma = new PrismaClient({});
 
-    app.decorate('prisma', prisma);
+    // app.decorate('prisma', prisma);
     await app.register(require('fastify-cors'), {})
 
     app.get('/log', async (req, res) => { 
